@@ -22,10 +22,10 @@
     # Leave commented out to import into any host.
     # PowerShellHostName = ''
 
-    RequiredModules = 'VSYSUtility', 'BurntToast'
+    RequiredModules = @('BurntToast')
     RequiredAssemblies = 'System.Drawing', 
                          'System.Windows.Forms',
-                         'Lib\Spectre.Console.dll',
+                         #'Lib\Spectre.Console.dll',
                          'Lib\Ookii.Dialogs.WinForms.dll',
                          'PresentationCore',
                          'PresentationFramework',

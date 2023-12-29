@@ -7,32 +7,12 @@ function Invoke-SpectreTextPromptConfirm {
 
         [Parameter(Mandatory=$false)]
         [String]
-        $PreInstruction,
-
-        [Parameter(Mandatory=$false)]
-        [String]
         $ConfirmSuccess,
 
         [Parameter(Mandatory=$false)]
         [String]
-        $ConfirmFail,
-
-        [Parameter(Mandatory=$false)]
-        [Switch]
-        $ClearScreenBeforeDisplay
+        $ConfirmFail
     )
-
-    begin {
-
-        if($ClearScreenBeforeDisplay){
-            Clear-Host
-        }
-
-        if(![String]::IsNullOrWhiteSpace($PreInstruction)){
-            [Spectre.Console.AnsiConsole]::MarkupLine($PreInstruction)
-        }
-
-    }
 
     process {
 

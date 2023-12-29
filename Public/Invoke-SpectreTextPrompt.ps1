@@ -9,6 +9,7 @@ class ColorNames : IArgumentCompleter {
 
     static ColorNames() {
         [ColorNames]::Set = ('Spectre.Console.Color' -as [type]).GetProperties()
+
     }
 
     [IEnumerable[CompletionResult]] CompleteArgument(
@@ -105,19 +106,9 @@ function Invoke-SpectreTextPrompt {
 
         [Parameter(Mandatory=$false)]
         [String]
-        $ConfirmPrompt,
-
-        [Parameter(Mandatory=$false)]
-        [Switch]
-        $ClearScreenBeforeDisplay
+        $ConfirmPrompt
 
     )
-
-    begin {
-        if($ClearScreenBeforeDisplay){
-            Clear-Host
-        }
-    }
 
     process {
 
